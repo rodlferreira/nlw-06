@@ -14,13 +14,13 @@ type User = {
     signInWithGoogle: () => Promise<void>;
   };
 
-type AuthContextProps = {
+type AuthContextProviderProps = {
     children: ReactNode
 }
 
 export const AuthContext = createContext({} as AuthContextType);
   
-export function AuthContextProvider(props: AuthContextProps) {
+export function AuthContextProvider(props: AuthContextProviderProps) {
 
     const [user, setUser] = useState<User>();
 
